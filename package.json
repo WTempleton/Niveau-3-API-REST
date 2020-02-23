@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/WTempleton/Niveau-3-API-REST#readme",
   "dependencies": {
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "express": "^4.17.1",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.1",
+    "prettier": "^1.19.1"
   },
   "devDependencies": {
-    "body-parser": "^1.19.0"
+    "body-parser": "^1.19.0",
+    "eslint": "^6.8.0"
   }
 }

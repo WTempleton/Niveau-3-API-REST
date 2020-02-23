@@ -1,17 +1,16 @@
-const express = require('express');
-const listePremiers = require('../liste_nbr_prms');
+const express = require("express");
+const listPrimes = require("../list-prime-numbers");
 const router = express.Router();
 
-router.post('/calculs', function(req,res){
-    if (req.body.nombre > 0 && Number.isInteger(req.body.nombre)){
-        res.send({
-            squareRoot: Math.sqrt(req.body.nombre),
-            primes: listePremiers(req.body.nombre)
-        })
-    }
-    else {
-        res.status(400).send({error: "Fournir un entier positif"})
-    }
+router.post("/calculs", function(req, res) {
+  if (req.body.number > 0 && Number.isInteger(req.body.number)) {
+    res.send({
+      squareRoot: Math.sqrt(req.body.number),
+      primes: listPrimes(req.body.number)
+    });
+  } else {
+    res.status(400).send({ error: "Input a positive integer" });
+  }
 });
 
 module.exports = router;
